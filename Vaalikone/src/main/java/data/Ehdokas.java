@@ -21,6 +21,7 @@ public class Ehdokas {
 		try {
 			this.id = Integer.parseInt(id);
 		}
+		//jsakdjasdas
 		catch(NumberFormatException | NullPointerException e) {
 			//Do nothing - the value of id won't be changed
 		}
