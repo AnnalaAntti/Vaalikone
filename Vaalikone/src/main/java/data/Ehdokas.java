@@ -29,6 +29,6 @@ public class Ehdokas {
 		return etunimi;
 	}
 	public void setetunimi(String breed) {
-		this.etunimi = etunimi;
+		this.etunimi=etunimi;
 	}
 }
