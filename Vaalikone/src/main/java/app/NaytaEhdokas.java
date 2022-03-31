@@ -47,7 +47,7 @@ public class NaytaEhdokas extends HttpServlet {
 		}
 		request.setAttribute("ehdokkaat", list);
 		
-		RequestDispatcher rd=request.getRequestDispatcher("/jsp/showfish.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/jsp/ShowEhdokkaat.jsp");
 		rd.forward(request, response);
 	}
 }
