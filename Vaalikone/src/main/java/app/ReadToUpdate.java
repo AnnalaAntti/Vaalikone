@@ -43,7 +43,7 @@ public class ReadToUpdate extends HttpServlet {
 		}
 		request.setAttribute("ehdokas", f);
 		
-		RequestDispatcher rd=request.getRequestDispatcher("/jsp/showehdokastoedit.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/jsp/showehdokkaattoedit.jsp");
 		rd.forward(request, response);
 	}
 }
