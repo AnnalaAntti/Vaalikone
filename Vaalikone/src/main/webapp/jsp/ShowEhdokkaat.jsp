@@ -10,14 +10,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>Ehdokkaat</title>
 
 <link rel="stylesheet" type="text/css" href="mycssfilesomewhere.css">
 <script src="myscriptfile.js"></script>
 
 </head>
 <body>
-<h2></h2>
+<h2>Ehdokkaat</h2>
 <ol>
 <c:forEach var="ehdokkaat" items="${requestScope.Ehdokaslist}" >
 <li>${Ehdokas.id}: ${Ehdokas.etunimi} <a href='/delete?id=${Ehdokas.id}'>delete</a> <a href='/readtoupdate?id=${Ehdokas.id}'>update</a>

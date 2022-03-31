@@ -16,7 +16,7 @@ import data.Ehdokas;
 /**
  * Servlet implementation class ShowFish
  */
-@WebServlet("/showfish")
+@WebServlet("/naytaehdokas")
 public class NaytaEhdokas extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Dao dao=null;
