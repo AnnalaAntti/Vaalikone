@@ -20,7 +20,7 @@
 <h2>Ehdokkaat</h2>
 <ol>
 <c:forEach var="ehdokkaat" items="${requestScope.Ehdokaslist}" >
-<li>${Ehdokas.id}: ${Ehdokas.etunimi} <a href='/delete?id=${Ehdokas.id}'>delete</a> <a href='/readtoupdate?id=${Ehdokas.id}'>update</a>
+<li>${Ehdokas.id}: ${Ehdokas.etunimi}: ${Ehdokas.sukunimi} <a href='/delete?id=${Ehdokas.id}'>delete</a> <a href='/readtoupdate?id=${Ehdokas.id}'>update</a>
 </c:forEach>
 </ol>
 

@@ -4,10 +4,11 @@ public class Ehdokas {
 	private int id;
 	private String etunimi;
 	private String sukunimi;
-	public Ehdokas(String id, String etunimi) {
+	public Ehdokas(String id, String etunimi, String sukunimi) {
 		// TODO Auto-generated constructor stub
 		setId(id);
 		this.etunimi=etunimi;
+		this.sukunimi=sukunimi;
 	}
 	public Ehdokas() {
 		// TODO Auto-generated constructor stub

@@ -97,6 +97,7 @@ public class Dao {
 				f=new Ehdokas();
 				f.setId(RS.getInt("id"));
 				f.setetunimi(RS.getString("etunimi"));
+				f.setsukunimi(RS.getString("sukunimi"));
 			}
 			return f;
 		}

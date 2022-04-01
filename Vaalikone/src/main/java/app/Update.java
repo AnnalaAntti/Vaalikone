@@ -30,9 +30,10 @@ public class Update extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) 
 	     throws IOException, ServletException {
 		String id=request.getParameter("id");
-		String breed=request.getParameter("etunimi");
+		String etunimi=request.getParameter("etunimi");
+		String sukunimi=request.getParameter("sukunimi");
 		
-		Ehdokas f=new Ehdokas(id, breed);
+		Ehdokas f=new Ehdokas(id, etunimi, sukunimi);
 		
 		ArrayList<Ehdokas> list=null;
 		if (dao.getConnection()) {
