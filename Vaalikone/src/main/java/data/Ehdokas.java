@@ -3,6 +3,7 @@ package data;
 public class Ehdokas {
 	private int id;
 	private String etunimi;
+	private String sukunimi;
 	public Ehdokas(String id, String etunimi) {
 		// TODO Auto-generated constructor stub
 		setId(id);
@@ -29,7 +30,13 @@ public class Ehdokas {
 	public String getetunimi() {
 		return etunimi;
 	}
-	public void setetunimi( String etunimi) {
+	public void setetunimi( String sukunimi) {
 		this.etunimi=etunimi;
+	}
+	public String getsukunimi() {
+		return sukunimi;
+	}
+	public void setsukunimi( String sukunimi) {
+		this.sukunimi=sukunimi;
 	}
 }
