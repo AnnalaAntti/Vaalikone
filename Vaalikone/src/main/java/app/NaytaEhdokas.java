@@ -14,7 +14,7 @@ import dao.Dao;
 import data.Ehdokas;
 
 /**
- * Servlet implementation class ShowFish
+ * Servlet implementation class NaytaEhdokas
  */
 @WebServlet("/naytaehdokas")
 public class NaytaEhdokas extends HttpServlet {
