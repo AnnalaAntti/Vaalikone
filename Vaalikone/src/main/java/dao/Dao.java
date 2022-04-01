@@ -51,6 +51,7 @@ public class Dao {
 				Ehdokas f=new Ehdokas();
 				f.setId(RS.getInt("id"));
 				f.setetunimi(RS.getString("etunimi"));
+				f.setsukunimi(RS.getString("sukunimi"));
 				list.add(f);
 			}
 			return list;
