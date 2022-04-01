@@ -18,4 +18,4 @@ Ehdokas etunimi: <input type='text' name='etunimi' value='${requestScope.ehdokas
 <input type='submit' name='ok' value='Send'> 
 </form>
 </body>
-</html>
+</html> 
