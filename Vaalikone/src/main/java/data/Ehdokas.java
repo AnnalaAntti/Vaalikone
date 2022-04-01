@@ -29,7 +29,7 @@ public class Ehdokas {
 	public String getetunimi() {
 		return etunimi;
 	}
-	public void setetunimi(String breed) {
+	public void setetunimi( String etunimi) {
 		this.etunimi=etunimi;
 	}
 }

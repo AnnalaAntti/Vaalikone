@@ -14,9 +14,9 @@ import dao.Dao;
 import data.Ehdokas;
 
 /**
- * Servlet implementation class ShowFish
+ * Servlet implementation class NaytaEhdokas
  */
-@WebServlet("/showfish")
+@WebServlet("/naytaehdokas")
 public class NaytaEhdokas extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Dao dao=null;
@@ -47,7 +47,7 @@ public class NaytaEhdokas extends HttpServlet {
 		}
 		request.setAttribute("ehdokkaat", list);
 		
-		RequestDispatcher rd=request.getRequestDispatcher("/jsp/showfish.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/jsp/ShowEhdokkaat.jsp");
 		rd.forward(request, response);
 	}
 }
