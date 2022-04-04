@@ -20,7 +20,7 @@
 <h2>Ehdokkaat</h2>
 <ol>
 <c:forEach var="ehdokkaat" items="${requestScope.Ehdokaslist}" >
-<li>${Ehdokas.id}: ${Ehdokas.etunimi}: ${Ehdokas.sukunimi}
+<li>${Ehdokas.id}: ${Ehdokas.etunimi}: ${Ehdokas.sukunimi} <a href='/delete?id=${Ehdokas.id}'>delete</a> <a href='/readtoupdate?id=${Ehdokas.id}'>update</a>
 </c:forEach>
 </ol>
 
@@ -29,7 +29,7 @@ ArrayList<Ehdokas> EhdokasList=(ArrayList<Ehdokas>)request.getAttribute("ehdokka
 
 for (int i=0;EhdokasList!=null && i<EhdokasList.size();i++){
 	Ehdokas f=EhdokasList.get(i);
-	out.println(f.getId()+": "+f.getetunimi()+" "+f.getsukunimi());
+	out.println(f.getId()+": "+f.getetunimi()+" "+f.getsukunimi()+"<a href='/delete?id="+f.getId()+"'>delete</a> <a href='/readtoupdate?id="+f.getId()+"'>update</a>");
 }
 %>
 
