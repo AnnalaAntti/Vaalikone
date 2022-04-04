@@ -3,10 +3,12 @@ package data;
 public class Ehdokas {
 	private int id;
 	private String etunimi;
-	public Ehdokas(String id, String etunimi) {
+	private String sukunimi;
+	public Ehdokas(String id, String etunimi, String sukunimi) {
 		// TODO Auto-generated constructor stub
 		setId(id);
 		this.etunimi=etunimi;
+		this.sukunimi=sukunimi;
 	}
 	public Ehdokas() {
 		// TODO Auto-generated constructor stub
@@ -31,5 +33,11 @@ public class Ehdokas {
 	}
 	public void setetunimi( String etunimi) {
 		this.etunimi=etunimi;
+	}
+	public String getsukunimi() {
+		return sukunimi;
+	}
+	public void setsukunimi( String sukunimi) {
+		this.sukunimi=sukunimi;
 	}
 }
