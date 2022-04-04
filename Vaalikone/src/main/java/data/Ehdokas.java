@@ -31,7 +31,7 @@ public class Ehdokas {
 	public String getetunimi() {
 		return etunimi;
 	}
-	public void setetunimi( String sukunimi) {
+	public void setetunimi( String etunimi) {
 		this.etunimi=etunimi;
 	}
 	public String getsukunimi() {
