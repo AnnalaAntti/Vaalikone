@@ -52,6 +52,16 @@ public class Dao {
 				f.setId(RS.getInt("id"));
 				f.setetunimi(RS.getString("etunimi"));
 				f.setsukunimi(RS.getString("sukunimi"));
+				f.setK1(RS.getInt("k1"));
+				f.setK2(RS.getInt("k2"));
+				f.setK3(RS.getInt("k3"));
+				f.setK4(RS.getInt("k4"));
+				f.setK5(RS.getInt("k5"));
+				f.setK6(RS.getInt("k6"));
+				f.setK7(RS.getInt("k7"));
+				f.setK8(RS.getInt("k8"));
+				f.setK9(RS.getInt("k9"));
+				f.setK10(RS.getInt("k10"));
 				list.add(f);
 			}
 			return list;
@@ -98,6 +108,16 @@ public class Dao {
 				f.setId(RS.getInt("id"));
 				f.setetunimi(RS.getString("etunimi"));
 				f.setsukunimi(RS.getString("sukunimi"));
+				f.setK1(RS.getInt("k1"));
+				f.setK2(RS.getInt("k2"));
+				f.setK3(RS.getInt("k3"));
+				f.setK4(RS.getInt("k4"));
+				f.setK5(RS.getInt("k5"));
+				f.setK6(RS.getInt("k6"));
+				f.setK7(RS.getInt("k7"));
+				f.setK8(RS.getInt("k8"));
+				f.setK9(RS.getInt("k9"));
+				f.setK10(RS.getInt("k10"));
 			}
 			return f;
 		}
