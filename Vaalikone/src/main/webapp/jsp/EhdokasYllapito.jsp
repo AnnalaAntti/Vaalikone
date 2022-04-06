@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ehdokkaat</title>
+<title>Ylläpito</title>
 
 <link rel="stylesheet" type="text/css" href="mycssfilesomewhere.css">
 <script src="myscriptfile.js"></script>
@@ -29,7 +29,7 @@ ArrayList<Ehdokas> EhdokasList=(ArrayList<Ehdokas>)request.getAttribute("ehdokka
 
 for (int i=0;EhdokasList!=null && i<EhdokasList.size();i++){
 	Ehdokas ehdokas=EhdokasList.get(i);
-	out.println(ehdokas.getId()+": "+ehdokas.getetunimi()+" "+ehdokas.getsukunimi()+"<a href='/delete?id="+ehdokas.getId()+"'>delete</a> <a href='/readtoupdate?id="+ehdokas.getId()+"'>update</a>");
+	out.println(ehdokas.getId()+": "+ehdokas.getetunimi()+" "+ehdokas.getsukunimi()+" "+"<a href='/delete?id="+ehdokas.getId()+"'>poista</a> <a href='/readtoupdate?id="+ehdokas.getId()+"'>muokkaa</a>");
 }
 %>
 
