@@ -37,11 +37,11 @@ public class ReadToUpdate extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String id=request.getParameter("id");
-		Ehdokas f=null;
+		Ehdokas ehdokas=null;
 		if (dao.getConnection()) {
-			f=dao.readEhdokas(id);
+			ehdokas=dao.readEhdokas(id);
 		}
-		request.setAttribute("ehdokas", f);
+		request.setAttribute("ehdokas", ehdokas);
 		
 		RequestDispatcher rd=request.getRequestDispatcher("/jsp/showehdokkaattoedit.jsp");
 		rd.forward(request, response);

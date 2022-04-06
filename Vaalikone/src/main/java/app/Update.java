@@ -43,11 +43,11 @@ public class Update extends HttpServlet {
 		String k9=request.getParameter("k9");
 		String k10=request.getParameter("k10");
 		
-		Ehdokas f=new Ehdokas(id, etunimi, sukunimi, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10);
+		Ehdokas ehdokas=new Ehdokas(id, etunimi, sukunimi, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10);
 		
 		ArrayList<Ehdokas> list=null;
 		if (dao.getConnection()) {
-			list=dao.updateEhdokas(f);
+			list=dao.updateEhdokas(ehdokas);
 		}
 		
 		request.setAttribute("ehdokkaat", list);

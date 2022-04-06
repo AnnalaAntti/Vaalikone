@@ -48,21 +48,21 @@ public class Dao {
 			Statement stmt=conn.createStatement();
 			ResultSet RS=stmt.executeQuery("select * from ehdokkaat");
 			while (RS.next()){
-				Ehdokas f=new Ehdokas();
-				f.setId(RS.getInt("id"));
-				f.setetunimi(RS.getString("etunimi"));
-				f.setsukunimi(RS.getString("sukunimi"));
-				f.setK1(RS.getInt("k1"));
-				f.setK2(RS.getInt("k2"));
-				f.setK3(RS.getInt("k3"));
-				f.setK4(RS.getInt("k4"));
-				f.setK5(RS.getInt("k5"));
-				f.setK6(RS.getInt("k6"));
-				f.setK7(RS.getInt("k7"));
-				f.setK8(RS.getInt("k8"));
-				f.setK9(RS.getInt("k9"));
-				f.setK10(RS.getInt("k10"));
-				list.add(f);
+				Ehdokas ehdokas=new Ehdokas();
+				ehdokas.setId(RS.getInt("id"));
+				ehdokas.setetunimi(RS.getString("etunimi"));
+				ehdokas.setsukunimi(RS.getString("sukunimi"));
+				ehdokas.setK1(RS.getInt("k1"));
+				ehdokas.setK2(RS.getInt("k2"));
+				ehdokas.setK3(RS.getInt("k3"));
+				ehdokas.setK4(RS.getInt("k4"));
+				ehdokas.setK5(RS.getInt("k5"));
+				ehdokas.setK6(RS.getInt("k6"));
+				ehdokas.setK7(RS.getInt("k7"));
+				ehdokas.setK8(RS.getInt("k8"));
+				ehdokas.setK9(RS.getInt("k9"));
+				ehdokas.setK10(RS.getInt("k10"));
+				list.add(ehdokas);
 			}
 			return list;
 		}
@@ -70,12 +70,12 @@ public class Dao {
 			return null;
 		}
 	}
-	public ArrayList<Ehdokas> updateEhdokas(Ehdokas f) {
+	public ArrayList<Ehdokas> updateEhdokas(Ehdokas ehdokas) {
 		try {
 			String sql="update ehdokkaat set etunimi=? where id=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1, f.getetunimi());
-			pstmt.setInt(2, f.getId());
+			pstmt.setString(1, ehdokas.getetunimi());
+			pstmt.setInt(2, ehdokas.getId());
 			pstmt.executeUpdate();
 			return readAllEhdokas();
 		}
@@ -97,29 +97,29 @@ public class Dao {
 	}
 
 	public Ehdokas readEhdokas(String id) {
-		Ehdokas f=null;
+		Ehdokas ehdokas=null;
 		try {
 			String sql="select * from ehdokkaat where id=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			ResultSet RS=pstmt.executeQuery();
 			while (RS.next()){
-				f=new Ehdokas();
-				f.setId(RS.getInt("id"));
-				f.setetunimi(RS.getString("etunimi"));
-				f.setsukunimi(RS.getString("sukunimi"));
-				f.setK1(RS.getInt("k1"));
-				f.setK2(RS.getInt("k2"));
-				f.setK3(RS.getInt("k3"));
-				f.setK4(RS.getInt("k4"));
-				f.setK5(RS.getInt("k5"));
-				f.setK6(RS.getInt("k6"));
-				f.setK7(RS.getInt("k7"));
-				f.setK8(RS.getInt("k8"));
-				f.setK9(RS.getInt("k9"));
-				f.setK10(RS.getInt("k10"));
+				ehdokas=new Ehdokas();
+				ehdokas.setId(RS.getInt("id"));
+				ehdokas.setetunimi(RS.getString("etunimi"));
+				ehdokas.setsukunimi(RS.getString("sukunimi"));
+				ehdokas.setK1(RS.getInt("k1"));
+				ehdokas.setK2(RS.getInt("k2"));
+				ehdokas.setK3(RS.getInt("k3"));
+				ehdokas.setK4(RS.getInt("k4"));
+				ehdokas.setK5(RS.getInt("k5"));
+				ehdokas.setK6(RS.getInt("k6"));
+				ehdokas.setK7(RS.getInt("k7"));
+				ehdokas.setK8(RS.getInt("k8"));
+				ehdokas.setK9(RS.getInt("k9"));
+				ehdokas.setK10(RS.getInt("k10"));
 			}
-			return f;
+			return ehdokas;
 		}
 		catch(SQLException e) {
 			return null;
