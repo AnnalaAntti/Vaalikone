@@ -47,7 +47,7 @@ public class Yllapito extends HttpServlet {
 		}
 		request.setAttribute("ehdokkaat", list);
 		
-		RequestDispatcher rd=request.getRequestDispatcher("/jsp/kirjaudu.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/jsp/Testi.jsp");
 		rd.forward(request, response);
 	}
 }

@@ -31,7 +31,7 @@ public class Delete extends HttpServlet {
 			list=dao.deleteEhdokas(id);
 		}
 		request.setAttribute("ehdokkaat", list);
-		RequestDispatcher rd=request.getRequestDispatcher("/jsp/ShowEhdokkaat.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/jsp/Testi.jsp");
 		rd.forward(request, response);
 	}
 }

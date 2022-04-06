@@ -28,8 +28,8 @@
 ArrayList<Ehdokas> EhdokasList=(ArrayList<Ehdokas>)request.getAttribute("ehdokkaat");
 
 for (int i=0;EhdokasList!=null && i<EhdokasList.size();i++){
-	Ehdokas f=EhdokasList.get(i);
-	out.println(f.getId()+": "+f.getetunimi()+" "+f.getsukunimi()+"<a href='/delete?id="+f.getId()+"'>delete</a> <a href='/readtoupdate?id="+f.getId()+"'>update</a>");
+	Ehdokas ehdokas=EhdokasList.get(i);
+	out.println(ehdokas.getId()+": "+ehdokas.getetunimi()+" "+ehdokas.getsukunimi()+"<a href='/delete?id="+ehdokas.getId()+"'>delete</a> <a href='/readtoupdate?id="+ehdokas.getId()+"'>update</a>");
 }
 %>
 
