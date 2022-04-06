@@ -5,19 +5,19 @@ public class Kysymykset {
 	private String kysymykset;
 	public Kysymykset(String id, String kysymykset) {
 		// TODO Auto-generated constructor stub
-		setId(id);
+		setkysymyksetId(id);
 		this.kysymykset=kysymykset;
 	}
 	public Kysymykset() {
 		// TODO Auto-generated constructor stub
 	}
-	public int getId() {
+	public int getkysymyksetId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setkysymyksetId(int id) {
 		this.id = id;
 	}
-	public void setId(String id) {
+	public void setkysymyksetId(String id) {
 		try {
 			this.id = Integer.parseInt(id);
 		}
@@ -25,7 +25,7 @@ public class Kysymykset {
 			//Do nothing - the value of id won't be changed
 		}
 	}
-	public String getBreed() {
+	public String getKysymykset() {
 		return kysymykset;
 	}
 	public void setKysymykset(String kysymykset) {
