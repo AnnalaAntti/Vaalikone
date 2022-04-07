@@ -26,18 +26,47 @@ h1 {
   width: 870px;
   height: fit-content;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border: 10px solid white;
+
 }
 h2 {
   font-size: 36px;
   font-weight: 600;
   padding-top: 20px;
   padding-bottom: 30px;
+  color: #094067;
 }
 .vastaus li {
   display: inline-block;
 }
 .a {
   font-size: 20px;
-  width: 200px;
+  width: 150px;
+  border-bottom: 20px solid transparent;
+  color: #5F6C7B;
+}
+.nappi {
+  width: 150px;
+  accent-color: #EF4565;
+}
+.napit {
+  height: 40px;
+}
+.footer {
+  height: 200px;
+  background-color: #D8EEFE;
+}
+button {
+  background-color: #3DA9FC; color: #FFFFFE;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 30px;
+  top: 50px;
+  border: none;
+  position: relative;
+
+  cursor: pointer;
+  box-shadow:1px 2px #5F6C7B
 }
