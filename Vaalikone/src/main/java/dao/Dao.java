@@ -72,10 +72,21 @@ public class Dao {
 
 	public ArrayList<Ehdokas> updateEhdokas(Ehdokas ehdokas) {
 		try {
-			String sql = "update ehdokkaat set etunimi=? where id=?";
+			String sql = "update ehdokkaat set etunimi=?, sukunimi=?, k1=?, k2=?, k3=?, k4=?, k5=?, k6=?, k7=?, k8=?, k9=?, k10=?  where id=?";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, ehdokas.getetunimi());
-			pstmt.setInt(2, ehdokas.getId());
+			pstmt.setString(2, ehdokas.getsukunimi());
+			pstmt.setInt(3, ehdokas.getK1());
+			pstmt.setInt(4, ehdokas.getK2());
+			pstmt.setInt(5, ehdokas.getK3());
+			pstmt.setInt(6, ehdokas.getK4());
+			pstmt.setInt(7, ehdokas.getK5());
+			pstmt.setInt(8, ehdokas.getK6());
+			pstmt.setInt(9, ehdokas.getK7());
+			pstmt.setInt(10, ehdokas.getK8());
+			pstmt.setInt(11, ehdokas.getK9());
+			pstmt.setInt(12, ehdokas.getK10());
+			pstmt.setInt(13, ehdokas.getId());
 			pstmt.executeUpdate();
 			return readAllEhdokas();
 		} catch (SQLException e) {
