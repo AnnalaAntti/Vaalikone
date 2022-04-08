@@ -173,6 +173,7 @@ public class Dao {
 		}
 	}
 
+	@SuppressWarnings("null")
 	public Kysymykset readkysymykset(String id) {
 		Kysymykset kysymys = null;
 		try {
