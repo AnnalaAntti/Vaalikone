@@ -20,12 +20,12 @@
 	<h2>Kysymykset</h2>
 	<ol>
 		<c:forEach var="kysymykset" items="${requestScope.Kysymyksetlist}">
-			<li>${Kysymykset.id}:${Kysymykset.KYSYMYS}
+			<li>${Kysymykset.ID}:${Kysymykset.KYSYMYS}
 		</c:forEach>
 	</ol>
 
 	<%
-		ArrayList<Kysymykset> KysymyksetList = (ArrayList<Kysymykset>) request.getAttribute("kysymykset");
+		ArrayList<Kysymykset> KysymyksetList = (ArrayList<Kysymykset>) request.getAttribute("KYSYMYKSET");
 
 	for (int i = 0; KysymyksetList != null && i < KysymyksetList.size(); i++) {
 		Kysymykset Kysymykset = KysymyksetList.get(i);
