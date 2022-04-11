@@ -31,7 +31,7 @@ public class Ehdokas {
 		setK10(k10);
 		
 		}
-	public Ehdokas() {
+	public Ehdokas() { 
 		// TODO Auto-generated constructor stub
 	}
 	public int getId() {

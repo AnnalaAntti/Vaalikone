@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.Dao;
-import data.Ehdokas;
+import data.Kysymykset;
 
 /**
  * Servlet implementation class NaytaKysymykset
@@ -38,9 +38,9 @@ public class NaytaKysymykset extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ArrayList<Ehdokas> list=null;
+		ArrayList<Kysymykset> list=null;
 		if (dao.getConnection()) {
-			list=dao.readAllEhdokas();
+			list=dao.readAllKysymykset();
 		}
 		else {
 			System.out.println("No connection to database");
