@@ -173,7 +173,7 @@ public class Dao {
 			ResultSet RS = stmt.executeQuery("select * from KYSYMYKSET");
 			while (RS.next()) {
 				Kysymykset kysymys = new Kysymykset();
-				kysymys.setkysymyksetId(RS.getInt("KYSYMYS_ID"));
+				kysymys.setKysymyksetId(RS.getInt("KYSYMYS_ID"));
 				kysymys.setKysymykset(RS.getString("KYSYMYKSET"));
 
 				list.add(kysymys);
@@ -185,7 +185,7 @@ public class Dao {
 	}
 
 	@SuppressWarnings("null")
-	public Kysymykset readkysymykset(String id) {
+	public Kysymykset readKysymykset(String id) {
 		Kysymykset kysymys = null;
 		try {
 			String sql = "select * from KYSYMYKSET where KYSYMYKSET_ID=?";
@@ -193,7 +193,7 @@ public class Dao {
 			pstmt.setString(1, id);
 			ResultSet RS = pstmt.executeQuery();
 			while (RS.next()) {
-				kysymys.setkysymyksetId(RS.getInt("KYSYMYS_ID"));
+				kysymys.setKysymyksetId(RS.getInt("KYSYMYS_ID"));
 				kysymys.setKysymykset(RS.getString("KYSYMYKSET"));
 
 			}

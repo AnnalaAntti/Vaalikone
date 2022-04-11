@@ -17,19 +17,29 @@
 
 </head>
 <body>
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">KOTISIVU</a></li>
+        <li><a href='/naytakysymykset'>VASTAA KYSYMYKSIIN</a></li>
+        <li><a href='/naytaehdokas' class="active">SELAA EHDOKKAITA</a></li>
+        <li><a href="Kirjaudu.html">KIRJAUDU</a></li>
+      </ul>
+    </nav>
+  </header>
 	<h2>Kysymykset</h2>
 	<ol>
 		<c:forEach var="kysymykset" items="${requestScope.Kysymyksetlist}">
-			<li>${Kysymykset.ID}:${Kysymykset.KYSYMYS}
+			<li>${Kysymykset.KYSYMYS_ID}:${Kysymykset.KYSYMYS})</li>
 		</c:forEach>
 	</ol>
 
 	<%
-		ArrayList<Kysymykset> KysymyksetList = (ArrayList<Kysymykset>) request.getAttribute("KYSYMYKSET");
+		ArrayList<Kysymykset> KysymyksetList = (ArrayList<Kysymykset>)request.getAttribute("kysymykset");
 
 	for (int i = 0; KysymyksetList != null && i < KysymyksetList.size(); i++) {
 		Kysymykset Kysymykset = KysymyksetList.get(i);
-		out.println(Kysymykset.getkysymyksetId() + ": " + Kysymykset.getKysymykset());
+		out.println(Kysymykset.getKysymyksetId() + ": " + Kysymykset.getKysymykset());
 	}
 	%>
 
