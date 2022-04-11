@@ -42,7 +42,9 @@
 
 	for (int i = 0; EhdokasList != null && i < EhdokasList.size(); i++) {
 		Ehdokas ehdokas = EhdokasList.get(i);
-		out.println(ehdokas.getId() + ": " + ehdokas.getetunimi() + " " + ehdokas.getsukunimi());
+		out.println(ehdokas.getId() + ": " + ehdokas.getetunimi() + " " + ehdokas.getsukunimi()+ "<br>");
+		
+		
 	}
 	%>
 
