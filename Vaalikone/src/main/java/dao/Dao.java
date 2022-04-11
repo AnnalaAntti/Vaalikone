@@ -25,7 +25,7 @@ public class Dao {
 		this.pass = pass;
 	}
 
-	public boolean getConnection() {
+	public boolean getConnection() { 
 		try {
 			if (conn == null || conn.isClosed()) {
 				try {
