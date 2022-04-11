@@ -7,7 +7,7 @@ public class Vastaukset {
 		// TODO Auto-generated constructor stub
 		setVastauksetId(id);
 		this.vastaukset=EHDOKAS_ID;
-		this.vastaukset=KYSYMYS_ID;
+		this.vastaukset=KYSYMYS_ID; 
 		this.vastaukset=VASTAUS;
 	}
 	public Vastaukset() {
