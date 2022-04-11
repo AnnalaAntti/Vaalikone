@@ -25,7 +25,7 @@ public class Dao {
 		this.pass = pass;
 	}
 
-	public boolean getConnection() { 
+	public boolean getConnection() {
 		try {
 			if (conn == null || conn.isClosed()) {
 				try {
@@ -135,33 +135,26 @@ public class Dao {
 		}
 	}
 
-	public Ehdokas luoEhdokas(String id) {
-		Ehdokas ehdokas = null;
-		try {
-			String sql = "INSERT INTO ehdokkaat (id, etunimi, sukunimi, k1, k2, k3 , k4, k5. k6, k7, k8, k9, k10) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	public Ehdokas LuoEhdokas() {
+			Ehdokas ehdokas=new Ehdokas();
+				try {
+			String sql = "INSERT INTO ehdokkaat VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);
-			ResultSet RS = pstmt.executeQuery();
-			while (RS.next()) {
-				ehdokas = new Ehdokas();
-				ehdokas.setId(RS.getInt("id"));
-				ehdokas.setetunimi(RS.getString("etunimi"));
-				ehdokas.setsukunimi(RS.getString("sukunimi"));
-				ehdokas.setK1(RS.getInt("k1"));
-				ehdokas.setK2(RS.getInt("k2"));
-				ehdokas.setK3(RS.getInt("k3"));
-				ehdokas.setK4(RS.getInt("k4"));
-				ehdokas.setK5(RS.getInt("k5"));
-				ehdokas.setK6(RS.getInt("k6"));
-				ehdokas.setK7(RS.getInt("k7"));
-				ehdokas.setK8(RS.getInt("k8"));
-				ehdokas.setK9(RS.getInt("k9"));
-				ehdokas.setK10(RS.getInt("k10"));
-			}
+			pstmt.setString(1, ehdokas.getetunimi());
+			pstmt.setString(2, ehdokas.getsukunimi());
+			pstmt.setInt(3, ehdokas.getK1());
+			pstmt.setInt(4, ehdokas.getK2());
+			pstmt.setInt(5, ehdokas.getK3());
+			pstmt.setInt(6, ehdokas.getK4());
+			pstmt.setInt(7, ehdokas.getK5());
+			pstmt.setInt(8, ehdokas.getK6());
+			pstmt.setInt(9, ehdokas.getK7());
+			pstmt.setInt(10, ehdokas.getK8());
+			pstmt.setInt(11, ehdokas.getK9());
+			pstmt.setInt(12, ehdokas.getK10());
+			pstmt.executeUpdate();
 			return ehdokas;
-		}
-
-		catch (SQLException e) {
+		} catch (SQLException e) {
 			return null;
 		}
 	}
@@ -173,7 +166,7 @@ public class Dao {
 			ResultSet RS = stmt.executeQuery("select * from KYSYMYKSET");
 			while (RS.next()) {
 				Kysymykset kysymys = new Kysymykset();
-				kysymys.setKysymyksetId(RS.getInt("KYSYMYS_ID"));
+				kysymys.setkysymyksetId(RS.getInt("KYSYMYS_ID"));
 				kysymys.setKysymykset(RS.getString("KYSYMYKSET"));
 
 				list.add(kysymys);
@@ -185,7 +178,7 @@ public class Dao {
 	}
 
 	@SuppressWarnings("null")
-	public Kysymykset readKysymykset(String id) {
+	public Kysymykset readkysymykset(String id) {
 		Kysymykset kysymys = null;
 		try {
 			String sql = "select * from KYSYMYKSET where KYSYMYKSET_ID=?";
@@ -193,7 +186,7 @@ public class Dao {
 			pstmt.setString(1, id);
 			ResultSet RS = pstmt.executeQuery();
 			while (RS.next()) {
-				kysymys.setKysymyksetId(RS.getInt("KYSYMYS_ID"));
+				kysymys.setkysymyksetId(RS.getInt("KYSYMYS_ID"));
 				kysymys.setKysymykset(RS.getString("KYSYMYKSET"));
 
 			}
@@ -202,4 +195,3 @@ public class Dao {
 			return null;
 		}
 	}
-}
