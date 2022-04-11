@@ -5,9 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/kirjautuminen.css">
 <title>Kirjaudu</title>
 
-<link rel="stylesheet" type="text/css" href="mycssfilesomewhere.css">
+
 <script src="myscriptfile.js"></script>
 
 </head>
@@ -21,23 +22,25 @@
       </ul>
     </nav>
   </header>
-<body>    
+<body>
+<div class="container">
     <h2>Kirjaudu sisään</h2><br>    
     <div class="Kirjaudu">    
     <form id="kirjaudu" method="get" action="/update">    
-        <label><b>User Name     
+        <label><b>Käyttäjänimi:
         </b>    
         </label>    
-        <input type="text" name="Uname" id="Uname" placeholder="Username">    
+        <input type="text" name="Uname" id="Uname" placeholder="Käyttäjänimi">    
         <br><br>    
-        <label><b>Password     
+        <label><b>Salasana:
         </b>    
         </label>    
-        <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+        <input type="Password" name="Pass" id="Pass" placeholder="Salasana">    
         <br><br>    
-        <a href="/yllapito">Kirjaudu</a>       
+        <a class="nappi" href="/yllapito">Kirjaudu</a>       
         <br><br>    
     </form>     
-</div>    
+	</div>  
+</div>  
 </body>    
 </html>

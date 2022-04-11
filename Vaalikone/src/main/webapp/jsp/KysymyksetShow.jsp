@@ -67,6 +67,7 @@
 		out.println(Kysymykset.getKysymyksetId() + ": " + Kysymykset.getKysymykset());
 	}
 	%>
+	<br>
 	</div>
 </body>
 </html>
