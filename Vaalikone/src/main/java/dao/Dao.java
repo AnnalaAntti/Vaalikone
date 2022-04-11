@@ -167,7 +167,7 @@ public class Dao {
 	}
 
 	public ArrayList<Kysymykset> readAllKysymykset() {
-		ArrayList<Kysymykset> list = new ArrayList<>();
+		ArrayList<Kysymykset> list = new ArrayList<>(); 
 		try {
 			Statement stmt = conn.createStatement();
 			ResultSet RS = stmt.executeQuery("select * from KYSYMYKSET");
