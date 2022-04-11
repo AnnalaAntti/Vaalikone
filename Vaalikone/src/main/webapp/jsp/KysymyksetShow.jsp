@@ -35,7 +35,7 @@
 	</ol>
 
 	<%
-		ArrayList<Kysymykset> KysymyksetList = (ArrayList<Kysymykset>)request.getAttribute("kysymykset");
+		ArrayList<Kysymykset> KysymyksetList = (ArrayList<Kysymykset>)request.getAttribute("Kysymykset");
 
 	for (int i = 0; KysymyksetList != null && i < KysymyksetList.size(); i++) {
 		Kysymykset Kysymykset = KysymyksetList.get(i);
