@@ -27,7 +27,7 @@
       </ul>
     </nav>
   </header>
-	<h2>Kysymykset</h2>
+	<h2>Kysymykset</h2> 
 	<ol>
 		<c:forEach var="kysymykset" items="${requestScope.Kysymyksetlist}">
 			<li>${Kysymykset.KYSYMYS_ID}:${Kysymykset.KYSYMYS})</li>
