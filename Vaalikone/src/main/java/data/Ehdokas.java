@@ -14,7 +14,8 @@ public class Ehdokas {
 	private int k8;
 	private int k9;
 	private int k10;
-	public Ehdokas(String id, String etunimi, String sukunimi, String k1, String k2, String k3, String k4, String k5, String k6, String k7, String k8, String k9, String k10) {
+	private int numero;
+	public Ehdokas(String id, String etunimi, String sukunimi, String k1, String k2, String k3, String k4, String k5, String k6, String k7, String k8, String k9, String k10, String numero) {
 		// TODO Auto-generated constructor stub
 		setId(id);
 		this.etunimi=etunimi;
@@ -29,6 +30,7 @@ public class Ehdokas {
 		setK8(k8);
 		setK9(k9);
 		setK10(k10);
+		setNumero(numero);
 		
 		}
 	public Ehdokas() { 
@@ -151,4 +153,14 @@ public class Ehdokas {
 	public void setK1(String k1) {
 		this.k1 = Integer.parseInt(k1);
 	}
-}
+	public int getNumero() {
+		return numero;
+	}
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	public void setNumero(String numero) {
+		this.numero = Integer.parseInt(numero);
+	}
+}	
+	

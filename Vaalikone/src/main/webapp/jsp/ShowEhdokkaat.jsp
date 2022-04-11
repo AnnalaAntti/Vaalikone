@@ -29,10 +29,10 @@
     </nav>
   </header>
   <div class="container">
-	<h2>Ehdokkaat</h2>
+	<h2>Ehdokkaat ja äänestysnumero</h2>
 	<ol>
 		<c:forEach var="ehdokkaat" items="${requestScope.Ehdokaslist}">
-			<li>${Ehdokas.id}:${Ehdokas.etunimi}: ${Ehdokas.sukunimi}
+			<li>${Ehdokas.numero}:${Ehdokas.etunimi}: ${Ehdokas.sukunimi}
 		</c:forEach>
 	</ol>
 	</div>
@@ -42,7 +42,7 @@
 
 	for (int i = 0; EhdokasList != null && i < EhdokasList.size(); i++) {
 		Ehdokas ehdokas = EhdokasList.get(i);
-		out.println(ehdokas.getId() + ": " + ehdokas.getetunimi() + " " + ehdokas.getsukunimi()+ "<br>");
+		out.println(ehdokas.getNumero() + ": " + ehdokas.getetunimi() + " " + ehdokas.getsukunimi()+ "<br>");
 		
 		
 	}

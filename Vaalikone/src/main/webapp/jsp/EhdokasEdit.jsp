@@ -26,6 +26,7 @@ Kysymys 7 vastaus: <input type='text' name='k7' value='${requestScope.ehdokas.k7
 Kysymys 8 vastaus: <input type='text' name='k8' value='${requestScope.ehdokas.k8}'><br>
 Kysymys 9 vastaus: <input type='text' name='k9' value='${requestScope.ehdokas.k9}'><br>
 Kysymys 10 vastaus: <input type='text' name='k10' value='${requestScope.ehdokas.k10}'><br>
+Äänestys numero: <input type='text' name='numero' value='${requestScope.ehdokas.numero}'><br>
 <input type='submit' name='ok' value='Send'> 
 </form>
 </body>

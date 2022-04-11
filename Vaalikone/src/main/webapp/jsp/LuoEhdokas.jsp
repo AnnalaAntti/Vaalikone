@@ -25,6 +25,7 @@ Kysymys 7 vastaus: <input type='text' name='k7' value=''><br>
 Kysymys 8 vastaus: <input type='text' name='k8' value=''><br>
 Kysymys 9 vastaus: <input type='text' name='k9' value=''><br>
 Kysymys 10 vastaus: <input type='text' name='k10' value=''><br>
+Äänestysnumero: <input type='text' name='numero' value=''><br>
 <input type='submit' name='ok' value='Send'> 
 </form>
 </body>
