@@ -62,6 +62,7 @@ public class Dao {
 				ehdokas.setK8(RS.getInt("k8"));
 				ehdokas.setK9(RS.getInt("k9"));
 				ehdokas.setK10(RS.getInt("k10"));
+				ehdokas.setNumero(RS.getInt("numero"));
 				list.add(ehdokas);
 			}
 			return list;
@@ -72,7 +73,7 @@ public class Dao {
 
 	public ArrayList<Ehdokas> updateEhdokas(Ehdokas ehdokas) {
 		try {
-			String sql = "update ehdokkaat set etunimi=?, sukunimi=?, k1=?, k2=?, k3=?, k4=?, k5=?, k6=?, k7=?, k8=?, k9=?, k10=?  where id=?";
+			String sql = "update ehdokkaat set etunimi=?, sukunimi=?, k1=?, k2=?, k3=?, k4=?, k5=?, k6=?, k7=?, k8=?, k9=?, k10=?, numero=? where id=?";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, ehdokas.getetunimi());
 			pstmt.setString(2, ehdokas.getsukunimi());
@@ -86,7 +87,8 @@ public class Dao {
 			pstmt.setInt(10, ehdokas.getK8());
 			pstmt.setInt(11, ehdokas.getK9());
 			pstmt.setInt(12, ehdokas.getK10());
-			pstmt.setInt(13, ehdokas.getId());
+			pstmt.setInt(13, ehdokas.getNumero());
+			pstmt.setInt(14, ehdokas.getId());
 			pstmt.executeUpdate();
 			return readAllEhdokas();
 		} catch (SQLException e) {
@@ -128,6 +130,7 @@ public class Dao {
 				ehdokas.setK8(RS.getInt("k8"));
 				ehdokas.setK9(RS.getInt("k9"));
 				ehdokas.setK10(RS.getInt("k10"));
+				ehdokas.setNumero(RS.getInt("numero"));
 			}
 			return ehdokas;
 		} catch (SQLException e) {
@@ -135,10 +138,9 @@ public class Dao {
 		}
 	}
 
-	public Ehdokas LuoEhdokas() {
-			Ehdokas ehdokas=new Ehdokas();
+	public ArrayList<Ehdokas> luoEhdokas(Ehdokas ehdokas) {
 				try {
-			String sql = "INSERT INTO ehdokkaat VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String sql = "insert into ehdokkaat (etunimi, sukunimi, K1, K2, K3, K4, K5, K6, K7, K8, K9, K10,numero ) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, ehdokas.getetunimi());
 			pstmt.setString(2, ehdokas.getsukunimi());
@@ -152,8 +154,9 @@ public class Dao {
 			pstmt.setInt(10, ehdokas.getK8());
 			pstmt.setInt(11, ehdokas.getK9());
 			pstmt.setInt(12, ehdokas.getK10());
+			pstmt.setInt(13, ehdokas.getNumero());
 			pstmt.executeUpdate();
-			return ehdokas;
+			return readAllEhdokas();
 		} catch (SQLException e) {
 			return null;
 		}
