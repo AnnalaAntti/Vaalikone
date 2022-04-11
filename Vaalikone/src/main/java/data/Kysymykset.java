@@ -14,7 +14,7 @@ public class Kysymykset {
 	public int getKysymyksetId() {
 		return id;
 	}
-	public void setKysymyksetId(int id) {
+	public void setKysymyksetId(int id) { 
 		this.id = id;
 	}
 	public void setKysymyksetId(String id) {
