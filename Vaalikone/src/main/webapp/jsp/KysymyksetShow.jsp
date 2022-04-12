@@ -64,7 +64,7 @@
 
 	for (int i = 0; KysymyksetList != null && i < KysymyksetList.size(); i++) {
 		Kysymykset Kysymykset = KysymyksetList.get(i);
-		out.println(Kysymykset.getKysymyksetId() + ": " + Kysymykset.getKysymykset()+"<br>");
+		out.println(Kysymykset.getKysymyksetId() + ": " + Kysymykset.getKysymykset()+ "<br>");
 	}
 	%>
 	<br>
