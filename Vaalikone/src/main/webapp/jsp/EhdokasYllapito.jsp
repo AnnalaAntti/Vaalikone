@@ -44,7 +44,7 @@
 
 	for (int i = 0; EhdokasList != null && i < EhdokasList.size(); i++) {
 		Ehdokas ehdokas = EhdokasList.get(i);
-		out.println(ehdokas.getId() + ": " + ehdokas.getetunimi() + " " + ehdokas.getsukunimi() + " "
+		out.println(ehdokas.getetunimi() + " " + ehdokas.getsukunimi() + " "
 		+ "<a href='/delete?id=" + ehdokas.getId() + "'>poista</a> <a href='/readtoupdate?id=" + ehdokas.getId()
 		+ "'>muokkaa</a>" + "<br>");
 	}
