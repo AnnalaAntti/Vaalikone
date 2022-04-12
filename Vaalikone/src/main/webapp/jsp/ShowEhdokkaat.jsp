@@ -35,17 +35,18 @@
 				<li>${Ehdokas.numero}:${Ehdokas.etunimi}:${Ehdokas.sukunimi}
 			</c:forEach>
 		</ol>
-	</div>
-
+	
+	<div class="lista">
 	<%
 		ArrayList<Ehdokas> EhdokasList = (ArrayList<Ehdokas>) request.getAttribute("ehdokkaat");
 
 	for (int i = 0; EhdokasList != null && i < EhdokasList.size(); i++) {
 		Ehdokas ehdokas = EhdokasList.get(i);
-		out.println(ehdokas.getNumero() + ": " + ehdokas.getetunimi() + " " + ehdokas.getsukunimi() + "<br>");
+		out.println("<p>" + ehdokas.getNumero() + ": " + ehdokas.getetunimi() + " " + ehdokas.getsukunimi() + "</p>" + "<br>");
 
 	}
 	%>
-
+	</div>
+</div>
 </body>
 </html>
