@@ -10,6 +10,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/ylläpito.css">
 <title>Ylläpito</title>
 
 <link rel="stylesheet" type="text/css" href="mycssfilesomewhere.css">
@@ -17,15 +19,26 @@
 
 </head>
 <body>
-	<h2>Ylläpidä ehdokkaita</h2>
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">KOTISIVU</a></li>
+        <li><a href='/naytakysymykset'>VASTAA KYSYMYKSIIN</a></li>
+        <li><a href='/naytaehdokas'>SELAA EHDOKKAITA</a></li>
+        <li><a href="Kirjaudu.html">KIRJAUDU</a></li> 
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+	<h3>Ylläpidä ehdokkaita</h3>
 	<ol>
 		<c:forEach var="ehdokkaat" items="${requestScope.Ehdokaslist}">
-			<li>${Ehdokas.id}:${Ehdokas.etunimi}: ${Ehdokas.sukunimi} <a
-				href='/delete?id=${Ehdokas.id}'>delete</a> <a
-				href='/readtoupdate?id=${Ehdokas.id}'>update</a><br>
+			<li>${Ehdokas.id}:${Ehdokas.etunimi}: ${Ehdokas.sukunimi} 
+				<a href='/delete?id=${Ehdokas.id}'>delete</a>
+				<a href='/readtoupdate?id=${Ehdokas.id}'>update</a><br>
 		</c:forEach>
 	</ol>
-
+	<div class="lista">
 	<%
 		ArrayList<Ehdokas> EhdokasList = (ArrayList<Ehdokas>) request.getAttribute("ehdokkaat");
 
@@ -36,9 +49,10 @@
 		+ "'>muokkaa</a>" + "<br>");
 	}
 	%>
+	</div>
 	<br>
-	<a href='/readluoehdokas'>Luo uusi ehdokas</a>
-
-
+	<a class="linkki" href='/readluoehdokas'>Luo uusi ehdokas</a>
+	<br>
+</div>
 </body>
 </html>
