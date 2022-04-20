@@ -27,6 +27,7 @@ public class Update extends HttpServlet {
 	     throws IOException {
 		response.sendRedirect("index.html");
 	}
+	//aa
 	public void doPost(HttpServletRequest request, HttpServletResponse response) 
 	     throws IOException, ServletException {
 		String id=request.getParameter("id");
